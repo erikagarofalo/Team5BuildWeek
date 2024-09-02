@@ -36,7 +36,7 @@ header > img {
 /* inizio main */
 
 .container {
-  margin-left: 4rem;
+  text-align: center;
 }
 
 .correct,
@@ -60,7 +60,6 @@ header > img {
 }
 
 .correct {
-  /* margin-top: 15vh; */
   height: 25vh;
   width: 33%;
   color: #e7e7eb;
@@ -74,7 +73,6 @@ header > img {
 }
 
 .wrong {
-  /* margin-top: 15vh; */
   height: 25vh;
   width: 33%;
   color: #e7e7eb;
@@ -93,11 +91,10 @@ l'aline-center
 .hero > div {
   position: relative;
   margin-inline: auto;
-  height: 25vw;
-  width: 25vw;
+  height: 300px;
+  width: 300px;
   margin-block: 2.5rem;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .hero > div::before {
@@ -148,13 +145,13 @@ p {
 
 .ps-abdsolute {
   position: absolute;
-  top: 6rem;
-  left: 4.7rem;
+  top: 5rem;
+  left: 4.5rem;
 }
 
 #h6 {
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 span {
@@ -163,7 +160,7 @@ span {
 }
 
 .gradient-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 footer {
@@ -180,7 +177,6 @@ button {
   color: white;
   position: relative;
   bottom: 4rem;
-  right: 0.5rem;
   cursor: pointer;
   font-weight: 500;
   font-size: 1.3rem;
