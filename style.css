@@ -1,0 +1,97 @@
+body {
+  background-image: url(./asset/bg.jpg);
+  background-size: cover;
+  width: 100%;
+  max-width: 800px;
+  padding-left: 3rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.logo img {
+  width: 100px;
+  text-align: left;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: "Outfit", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: 20px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+h1 > span {
+  font-weight: 700;
+}
+.title {
+  margin-top: 5%;
+  margin-right: 50%;
+}
+.instructions {
+  text-align: left;
+  font-size: small;
+}
+
+h3 {
+  font-family: "Outfit", system-ui;
+  font-size: 25px;
+  color: #d20094;
+  margin-bottom: 0;
+}
+p {
+  margin-inline-start: auto;
+  margin-top: 0.5rem;
+  margin-right: 50%;
+}
+
+.instructions > ul > li {
+  margin-bottom: 5px;
+}
+li > span {
+  font-weight: bold;
+}
+
+.instructions > ul {
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 20px #00ffff;
+  font-weight: 700;
+  border: 0;
+  text-align: center;
+  background-color: #00ffff;
+}
+
+.button:hover {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 40px #00ffff;
+  font-weight: 700;
+  border: 0;
+  text-align: center;
+  background-color: #00ffff;
+  transition: 1, 3s;
+}
+input {
+  border: solid 1px white;
+  background-color: rgba(100, 100, 100, 0);
+  cursor: pointer;
+}
+.chechText {
+  display: inline-block;
+  font-weight: bold;
+}
