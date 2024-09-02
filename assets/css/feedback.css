@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset di base per padding, margin e box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Stile di base per il body con background */
+body {
+  background: url("../img/bg.jpg") no-repeat center center/cover;
+}
+
+/* Sezione Header */
+#header {
+  width: 100%;
+  margin: 20px 0 3%;
+}
+
+/* Sezione Logo */
+.container-logo,
+img {
+  padding: 10px;
+  margin-left: 90px;
+  width: 35%;
+}
+
+/* Contenitore delle istruzioni */
+#container-instructions {
+  font: 1.1em "Outfit", sans-serif;
+  text-align: left;
+  margin-left: -33%;
+}
+
+/* Titolo principale */
+#titolo1 {
+  font: 4.2rem "Outfit", sans-serif;
+  font-weight: 250;
+  margin-bottom: 13px;
+  width: 100%;
+  color: #e7e7eb;
+  line-height: 1;
+}
+
+#titolo1 .bold {
+  margin-top: -20px;
+  display: block;
+  font-weight: 600;
+}
+
+/* Contenitore della lista e testo in grassetto */
+.bold {
+  color: #e7e7eb;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+/* Contenitore della lista con margine e altezza della linea */
+#container-lista {
+  margin-left: 15px;
+  color: #bfd1d7;
+  line-height: 1.5;
+}
+
+/* Testo in viola */
+.violet {
+  font: 1.8em "Outfit", sans-serif;
+  font-weight: 600;
+  margin: 30px 0 7px;
+  color: #c2128d;
+}
+
+/* Contenitore dell'istruzione e paragrafi */
+#container-instruction,
+p {
+  font: 0.9em "Inter Tight", sans-serif;
+  margin-bottom: 30px;
+  color: #bfd1d7;
+}
+
+/* Contenitore del form di indice */
+#container-form-index {
+  margin-top: 100px;
+  color: white;
+  font-weight: 400;
+}
+
+/* Bottone Start */
+#start {
+  color: white;
+  border: 1px solid white;
+  position: relative;
+  right: -180px;
+}
+
+/* Checkbox rude */
+#rude-checkbox {
+  height: 17px;
+  width: 17px;
+  border: 1.8px solid white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Bottone di invio risposta */
+#invio-risposta {
+  display: inline-block;
+  color: #0a274f;
+  border: 1px solid white;
+  font-weight: 700;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  height: 55px;
+  width: 200px;
+  margin-top: -500px;
+  transition-duration: 0.2s;
+}
+
+/* Hover per le risposte */
+#container-answers div:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #d20094, #900080);
+}
+
+/* Hover per i bottoni */
+#invio-risposta:hover,
+#valutazione:hover,
+#invio-commento:hover {
+  background-color: #02ffff;
+  box-shadow: 0 0 20px rgba(2, 255, 255, 0.5), 0 0 20px rgba(2, 255, 255, 0.5), 0 0 20px rgba(2, 255, 255, 0.5);
+}
+
+/* Titolo della quarta pagina */
+#titolo4 {
+  font: 3rem "Outfit", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #e7e7eb;
+  text-align: center;
+}
+
+/* Contenitore del titolo */
+.container-titolo {
+  width: 78%;
+  margin: 0 auto;
+}
+
+/* Main per la prima e quarta pagina */
+#main1,
+#main4 {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Paragrafo nel contenitore del titolo */
+.container-titolo p {
+  font: 1.8em "Outfit", sans-serif;
+}
+
+/* Stile delle stelline */
+.rigaStelline {
+  font-size: 0.8em;
+  color: #051226;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.filter-stellina {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.filter-stellina:hover {
+  filter: invert(99%) sepia(52%) saturate(6753%) hue-rotate(91deg) brightness(112%) contrast(110%);
+}
+
+.highlight {
+  filter: invert(99%) sepia(52%) saturate(6753%) hue-rotate(91deg) brightness(112%) contrast(110%);
+}
+
+/* Etichetta del form di commento */
+#comment-form-container label {
+  text-align: center;
+  color: white;
+  font-size: 1.8em;
+  font-family: "Outfit";
+}
+
+/* Input per il commento */
+#commento {
+  margin-top: 50px;
+  padding-left: 20px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.4em;
+  border-bottom: 2px solid #c2138e;
+  height: min-content;
+  color: white;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Focus e attivazione dell'input */
+#commento:focus,
+#commento:active {
+  outline: none;
+}
+
+/* Contenitore del form di commento */
+#comment-form-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* Stile delle stelline */
+.star {
+  margin: 0 -5px;
+  transform: scale(0.75);
+}
+
+/* Stile per i bottoni di start e invio commento */
+#start,
+#invio-commento {
+  margin: 60px auto 0;
+  font-weight: 700;
+  font-size: 1.2em;
+  background-color: #02ffff;
+  color: #0a274f;
+  border: 1px solid white;
+  transition-duration: 0.2s;
+}
+
+/* Dimensioni comuni dei bottoni */
+.bottone {
+  display: inline-block;
+  height: 55px;
+  width: 200px;
+}
+
+/* Hover per il checkbox */
+#rude-checkbox:hover {
+  cursor: pointer;
+}
+
+/* Stile del bottone di invio commento */
+#invio-commento {
+  margin-top: 40px;
+  color: #0a274f;
+  border: 1px solid white;
+  font-weight: 700;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  height: 55px;
+  width: 200px;
+}

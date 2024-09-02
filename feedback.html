@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Feedback page where we tell how it's going" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container-logo">
+        <img src="assets/img/epicode_logo.png" alt="logo" id="logo" />
+      </div>
+    </header>
+    <main id="main4">
+      <div class="container-titolo">
+        <h1 id="titolo4">Tell us how it's going</h1>
+        <p>From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?</p>
+      </div>
+      <div class="rigaStelline">
+        <img id="stellina0" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="1" />
+        <img id="stellina1" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="2" />
+        <img id="stellina2" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="3" />
+        <img id="stellina3" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="4" />
+        <img id="stellina4" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="5" />
+        <img id="stellina5" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="6" />
+        <img id="stellina6" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="7" />
+        <img id="stellina7" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="8" />
+        <img id="stellina8" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="9" />
+        <img id="stellina9" class="filter-stellina" src="./assets/img/star.svg" alt="stella" value="10" />
+      </div>
+      <div id="comment-form-container">
+        <label for="commento">Leave us an open feedback about your experience so far</label>
+        <textarea placeholder="Write your comment here" id="commento" name="commento"></textarea>
+        <button onclick="cambiaPagina()" class="bottone" type="button" id="invio-commento">SUBMIT</button>
+      </div>
+    </main>
+    <script src="assets/js/feedback.js"></script>
+  </body>
+  <script>
+    function cambiaPagina() {
+      window.open("https://epicode.com/it/", "_blank");
+    }
+  </script>
+</html>
