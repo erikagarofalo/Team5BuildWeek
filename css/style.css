@@ -1,0 +1,187 @@
+/* box sizing per tutti */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 
+sfondo della pagina e grandezze
+scalabili 
+*/
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  background-position: 50% 70%;
+  overflow-y: hidden;
+  /* Outfit font */
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* inizio header con logo */
+header {
+  height: 12vh;
+  line-height: 22vh;
+}
+
+header > img {
+  width: 150px;
+  margin-left: 12vw;
+}
+
+/* inizio main */
+
+.container {
+  margin-left: 4rem;
+}
+
+.correct,
+.hero,
+.wrong {
+  display: inline-block;
+  vertical-align: top;
+  margin-inline: -3px;
+  font-size: 20px;
+  width: 100%;
+  height: 90vh;
+}
+
+.correct,
+.wrong {
+  margin-block: 28vh;
+  display: inline-block;
+  vertical-align: top;
+  margin-inline: -3px;
+  text-align: center;
+}
+
+.correct {
+  /* margin-top: 15vh; */
+  height: 25vh;
+  width: 33%;
+  color: #e7e7eb;
+}
+
+.hero {
+  height: 85vh;
+  width: 30%;
+  color: #e7e7eb;
+  text-align: center;
+}
+
+.wrong {
+  /* margin-top: 15vh; */
+  height: 25vh;
+  width: 33%;
+  color: #e7e7eb;
+}
+
+/*
+ div interni per centrare il testo senza 
+l'aline-center
+*/
+.correct > div {
+  width: 31%;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.hero > div {
+  position: relative;
+  margin-inline: auto;
+  height: 25vw;
+  width: 25vw;
+  margin-block: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-image: conic-gradient(#c2128d 0% 33%, #00ffff 0% 67%);
+  mask: radial-gradient(farthest-side, transparent 70%, black 71%);
+  z-index: 1;
+}
+
+.wrong > div {
+  width: 28%;
+  margin-inline: auto;
+  text-align: right;
+}
+
+h1,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.font-weight-lite {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.hero-parag {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.ps-abdsolute {
+  position: absolute;
+  top: 6rem;
+  left: 4.7rem;
+}
+
+#h6 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+span {
+  color: #00ffff;
+  display: block;
+}
+
+.gradient-text {
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  margin: 0;
+}
+
+/* aside */
+button {
+  width: 15%;
+  height: 50px;
+  border: 1px solid #e7e7eb;
+  background-color: rgba(100, 100, 100, 0);
+  color: white;
+  position: relative;
+  bottom: 4rem;
+  right: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
