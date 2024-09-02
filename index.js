@@ -20,5 +20,3 @@ button.addEventListener("click", function () {
     btn.classList.remove("illuminated");
   }
 });
-
-checkbox.addEventListener("change", updateButtonState);
