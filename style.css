@@ -92,7 +92,7 @@ footer {
 
 .checkText {
   margin-left: 0.5rem;
-  margin-right: 30%;
+  margin-right: 28%;
   font-weight: 600;
   font-size: small;
   cursor: pointer;
@@ -114,7 +114,6 @@ footer {
   cursor: pointer;
   position: relative;
 }
-
 
 #myCheckbox:checked {
   background-color: rgba(0, 255, 255, 0.2);
