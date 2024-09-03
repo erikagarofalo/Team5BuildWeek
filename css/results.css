@@ -97,6 +97,16 @@ l'aline-center
   border-radius: 50%;
 }
 
+/* regola per l'animazione */
+@keyframes rotateGradient {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .hero > div::before {
   content: "";
   position: absolute;
@@ -105,9 +115,6 @@ l'aline-center
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  background-image: conic-gradient(#c2128d 0% 33%, #00ffff 0% 67%);
-  mask: radial-gradient(farthest-side, transparent 70%, black 71%);
-  z-index: 1;
 }
 
 .wrong > div {
@@ -163,12 +170,12 @@ span {
   font-size: 0.8rem;
 }
 
+/* inizio footer */
 footer {
   text-align: center;
   margin: 0;
 }
 
-/* aside */
 button {
   width: 15%;
   height: 50px;
@@ -180,4 +187,10 @@ button {
   cursor: pointer;
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  background-color: rgb(0, 255, 255);
 }

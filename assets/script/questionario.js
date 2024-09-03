@@ -5,18 +5,13 @@ const questionsEasy = [
     difficulty: "easy",
     question: "What does CPU stand for?",
     correct_answer: "Central Processing Unit",
-    incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-    ],
+    incorrect_answers: ["Central Process Unit", "Computer Personal Unit", "Central Processor Unit"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -32,8 +27,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question:
-      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    question: "Pointers were not used in the original C programming language; they were added later on in C++.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -41,8 +35,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the most preferred image format used for logos in the Wikimedia database?",
+    question: "What is the most preferred image format used for logos in the Wikimedia database?",
     correct_answer: ".svg",
     incorrect_answers: [".png", ".jpeg", ".gif"],
   },
@@ -52,18 +45,13 @@ const questionsEasy = [
     difficulty: "easy",
     question: "In web design, what does CSS stand for?",
     correct_answer: "Cascading Style Sheet",
-    incorrect_answers: [
-      "Counter Strike: Source",
-      "Corrective Style Sheet",
-      "Computer Style Sheet",
-    ],
+    incorrect_answers: ["Counter Strike: Source", "Corrective Style Sheet", "Computer Style Sheet"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the code name for the mobile operating system Android 7.0?",
+    question: "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
@@ -87,8 +75,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which programming language shares its name with an island in Indonesia?",
+    question: "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -115,14 +102,9 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "The computer OEM manufacturer Clevo, known for its Sager notebook line, is based in which country?",
+    question: "The computer OEM manufacturer Clevo, known for its Sager notebook line, is based in which country?",
     correct_answer: "Taiwan",
-    incorrect_answers: [
-      "United States",
-      "Germany",
-      "China (People&'s Republic of)",
-    ],
+    incorrect_answers: ["United States", "Germany", "China (People&'s Republic of)"],
   },
   {
     type: "boolean",
@@ -136,8 +118,7 @@ const questionsMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
+    question: "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -145,8 +126,7 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "Which of the following is a personal computer made by the Japanese company Fujitsu?",
+    question: "Which of the following is a personal computer made by the Japanese company Fujitsu?",
     correct_answer: "FM-7",
     incorrect_answers: ["PC-9801", "Xmillennium ", "MSX"],
   },
@@ -154,8 +134,7 @@ const questionsMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
+    question: "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -163,34 +142,23 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
+    question: "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
     correct_answer: "marquee&gt/marquee&gt;",
-    incorrect_answers: [
-      "scroll&gt;/scroll&gt;",
-      "move&gt;/move&gt;",
-      "slide&gt;/slide&gt;",
-    ],
+    incorrect_answers: ["scroll&gt;/scroll&gt;", "move&gt;/move&gt;", "slide&gt;/slide&gt;"],
   },
   {
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "Laserjet and inkjet printers are both examples of what type of printer?",
+    question: "Laserjet and inkjet printers are both examples of what type of printer?",
     correct_answer: "Non-impact printer",
-    incorrect_answers: [
-      "Impact printer",
-      "Daisywheel printer",
-      "Dot matrix printer",
-    ],
+    incorrect_answers: ["Impact printer", "Daisywheel printer", "Dot matrix printer"],
   },
   {
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "The common software-programming acronym &quot;I18N&quot; comes from the term &quot;Interlocalization&quot;.",
+    question: "The common software-programming acronym &quot;I18N&quot; comes from the term &quot;Interlocalization&quot;.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -217,8 +185,7 @@ const questionsHard = [
     type: "boolean",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
+    question: "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -226,21 +193,15 @@ const questionsHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What is the name of the process that sends one qubit of information using two bits of classical information?",
+    question: "What is the name of the process that sends one qubit of information using two bits of classical information?",
     correct_answer: "Quantum Teleportation",
-    incorrect_answers: [
-      "Super Dense Coding",
-      "Quantum Entanglement",
-      "Quantum Programming",
-    ],
+    incorrect_answers: ["Super Dense Coding", "Quantum Entanglement", "Quantum Programming"],
   },
   {
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "Which of the following computer components can be built using only NAND gates?",
+    question: "Which of the following computer components can be built using only NAND gates?",
     correct_answer: "ALU",
     incorrect_answers: ["CPU", "RAM", "Register"],
   },
@@ -248,8 +209,7 @@ const questionsHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "According to DeMorgan&#039;s Theorem, the Boolean expression (AB) is equivalent to:",
+    question: "According to DeMorgan&#039;s Theorem, the Boolean expression (AB) is equivalent to:",
     correct_answer: "A + B;",
     incorrect_answers: ["AB + BA", "A;B", "AB + AB"],
   },
@@ -257,8 +217,7 @@ const questionsHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
+    question: "What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
     correct_answer: "Coffee Lake",
     incorrect_answers: ["Sandy Bridge", "Skylake", "Broadwell"],
   },
@@ -274,8 +233,7 @@ const questionsHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "Which of these names was an actual codename for a cancelled Microsoft project?",
+    question: "Which of these names was an actual codename for a cancelled Microsoft project?",
     correct_answer: "Neptune",
     incorrect_answers: ["Enceladus", "Pollux", "Saturn"],
   },
@@ -283,8 +241,7 @@ const questionsHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+    question: "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
     correct_answer: "Transport",
     incorrect_answers: ["Session", "Data link", "Network"],
   },
@@ -366,9 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadQuestion() {
       const question = questions[currentQuestionIndex];
       questionElement.textContent = question.question; // Visualizza la domanda corrente
-      questionNumberElement.textContent = `QUESTION  ${
-        currentQuestionIndex + 1
-      }  /  ${questions.length}`;
+      questionNumberElement.textContent = `QUESTION  ${currentQuestionIndex + 1}  /  ${questions.length}`;
 
       function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -414,17 +369,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (button.dataset.answer === correctAnswer) {
           button.classList.add("correct");
         }
-        if (
-          button.dataset.answer === selectedAnswer &&
-          selectedAnswer !== correctAnswer
-        ) {
+        if (button.dataset.answer === selectedAnswer && selectedAnswer !== correctAnswer) {
           button.classList.add("incorrect");
         }
       });
 
-      const selectedButton = answerList.querySelector(
-        `li[data-answer="${selectedAnswer}"]`
-      );
+      const selectedButton = answerList.querySelector(`li[data-answer="${selectedAnswer}"]`);
       selectedButton.classList.add("selected");
 
       clearInterval(interval); // Ferma il timer corrente
