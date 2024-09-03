@@ -108,14 +108,14 @@ footer {
 #myCheckbox {
   width: 25px;
   height: 25px;
-  appearance: none; /* Rimuove lo stile predefinito */
+  appearance: none;
   background-color: transparent;
   border: solid 1px white;
   cursor: pointer;
   position: relative;
 }
 
-/* Aggiungi un segno di spunta e uno sfondo quando il checkbox è selezionato */
+
 #myCheckbox:checked {
   background-color: rgba(0, 255, 255, 0.2);
 }
