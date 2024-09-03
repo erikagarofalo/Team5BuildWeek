@@ -45,7 +45,7 @@ h3 {
 }
 p {
   margin-inline-start: auto;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
   margin-right: 50%;
 }
 
@@ -92,9 +92,9 @@ footer {
 }
 
 .checkText {
-  margin: 0;
-  margin-right: 29%;
-  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-right: 30%;
+  font-weight: 600;
   font-size: small;
   cursor: pointer;
 }
@@ -102,4 +102,7 @@ footer {
 .illuminated {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+#myButton {
+  font-size: 20px;
 }
