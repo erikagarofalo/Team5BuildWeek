@@ -1,6 +1,6 @@
 const checkbox = document.getElementById("myCheckbox");
 const button = document.getElementById("myButton");
-const illuminated = document.querySelector(".illuminated");
+const divHome = document.querySelector(".box");
 
 checkbox.addEventListener("change", function () {
   button.disabled = !this.checked;
@@ -15,7 +15,7 @@ checkbox.addEventListener("change", function () {
 
 button.addEventListener("click", function () {
   if (checkbox.checked) {
-    window.location.href = "https://www.esempio.com";
+    divHome.classList.add("hidden");
   } else {
     btn.classList.remove("illuminated");
   }
