@@ -1,0 +1,136 @@
+body {
+  background-image: url(./asset/bg.jpg);
+  background-size: cover;
+  max-width: 800px;
+  padding-left: 3rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.logo img {
+  width: 100px;
+  text-align: left;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: "Outfit", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: 20px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+h1 > span {
+  font-weight: 700;
+}
+.title {
+  margin-top: 5%;
+  margin-right: 50%;
+}
+.instructions {
+  text-align: left;
+  font-size: small;
+}
+
+h3 {
+  font-family: "Outfit", system-ui;
+  font-size: 25px;
+  color: #d20094;
+  margin-bottom: 0;
+}
+p {
+  margin-inline-start: auto;
+  margin-top: 0.2rem;
+  margin-right: 50%;
+}
+
+.instructions > ul > li {
+  margin-bottom: 5px;
+}
+li > span {
+  font-weight: bold;
+}
+
+.instructions > ul {
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 5px #00ffff;
+  font-weight: 700;
+  border: 0;
+  text-align: center;
+  background-color: #00ffff;
+  color: black;
+  cursor: not-allowed;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover:enabled {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.checkText {
+  margin-left: 0.5rem;
+  margin-right: 28%;
+  font-weight: 600;
+  font-size: small;
+}
+
+.illuminated {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+#myButton {
+  font-size: 20px;
+}
+#myCheckbox {
+  width: 25px;
+  height: 25px;
+  appearance: none;
+  background-color: transparent;
+  border: solid 1px white;
+  cursor: pointer;
+  position: relative;
+}
+
+#myCheckbox:checked {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+#myCheckbox:checked::after {
+  content: "✔";
+  font-size: 18px;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
