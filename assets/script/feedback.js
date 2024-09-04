@@ -11,6 +11,7 @@ stars.forEach((star, index) => {
     // console.log(index);
     selectedStar = true;
     stars.forEach((star, index2) => {
+      console.log(index, index2);
       if (index >= index2) {
         star.classList.add("filled");
       } else {
