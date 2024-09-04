@@ -29,7 +29,7 @@ window.onload = function () {
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background-image: conic-gradient(#c2128d 0% ${wrongPerce * 100}%, #00ffff 0% ${correctPerce * 100}%);
+      background-image: conic-gradient(#c2128d 0% ${Math.floor(wrongPerce * 100)}%, #00ffff 0% ${Math.ceil(correctPerce * 100)}%);
       mask: radial-gradient(farthest-side, transparent 70%, black 71%);
       z-index: 1;
       } `,
@@ -54,8 +54,8 @@ window.onload = function () {
     divGradientText.style.top = "5.5rem";
   }
 
-  correctPerc.innerHTML = `${correctScore}%`;
-  wrongPerc.innerHTML = `${wrongScore}%`;
+  correctPerc.innerHTML = `${Math.ceil((correctScore / totalQuestions) * 100)}%`;
+  wrongPerc.innerHTML = `${Math.floor((wrongScore / totalQuestions) * 100)}%`;
 
   correctRapp.innerHTML = `${correctScore / 10}/${totalQuestions / 10} `;
   wrongRapp.innerHTML = `${wrongScore / 10}/${totalQuestions / 10}`;
