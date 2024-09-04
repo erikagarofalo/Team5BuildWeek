@@ -1,3 +1,5 @@
+//import { questionsEasy, questionsMedium, questionsHard } from "./domande.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const questionNumberElement = document.getElementById("questionNumber");
   const questionElement = document.getElementById("question");
