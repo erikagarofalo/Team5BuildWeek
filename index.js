@@ -1,7 +1,7 @@
 const checkbox = document.getElementById("myCheckbox");
 const button = document.getElementById("myButton");
 const divHome = document.querySelector(".box");
-r;
+
 if (checkbox && button && divHome) {
   checkbox.addEventListener("change", function () {
     button.disabled = !this.checked;
