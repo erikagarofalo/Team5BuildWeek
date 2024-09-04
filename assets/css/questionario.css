@@ -69,6 +69,7 @@ span {
   font-family: "Outfit", "sans-serif";
   line-height: 1;
   font-weight: 200;
+  text-transform: uppercase;
 }
 
 .remainingSeconds {
