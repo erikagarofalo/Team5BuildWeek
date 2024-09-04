@@ -25,7 +25,7 @@ header {
 }
 
 #titleContainer {
-  max-width: 80%;
+  max-width: 70%;
 }
 
 h1 {
@@ -55,11 +55,11 @@ h3 {
 }
 
 #inputContainer {
-  margin: 2rem;
+  margin: 1%;
   border-bottom: #d20094 solid 2px;
-  max-width: 850px;
+  max-width: 70%;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 1%;
 }
 
 input {
@@ -69,12 +69,11 @@ input {
   color: white;
   padding: 1rem 3.5rem;
   font-size: 18px;
-  width: 60%;
+  width: 50%;
 }
 
 #buttonContainer {
   text-align: center;
-  margin: 0.5rem;
 }
 
 input:focus {
@@ -89,7 +88,7 @@ button {
   font-size: 20px;
   font-family: "Outfit", "sans-serif";
   font-weight: 700;
-  margin-top: 2.5rem;
+  margin: 1.5%;
   cursor: pointer;
   box-shadow: none;
   transition: box-shadow 0.3s ease;
@@ -102,11 +101,11 @@ button:focus {
 
 #starsContainer {
   text-align: center;
-  max-width: 80%;
-  margin: 3rem auto;
+  margin: 3%;
 }
 
 .star {
+  text-align: center;
   display: inline-block;
   padding: 2% 2%;
   background-image: url(../img/star.svg);
