@@ -10,65 +10,50 @@ body {
 }
 
 header {
-  padding-top: 5%;
-  padding-left: 10%;
+  width: 40%;
+  padding-top: 2%;
+  padding-left: 5%;
+  display: inline-block; /* Mantiene il layout in linea con altri elementi */
 }
 
 #epicodeLogo {
-  width: 15%;
+  width: 25%;
 }
 
 #titleContainer {
-  max-width: 400px;
-}
-
-h1 {
-  width: 500px;
-  font-family: "Outfit", "sans-serif";
-  font-size: 79px;
-  color: white;
+  max-width: 40%;
 }
 
 span {
   font-weight: 800;
 }
 
-#container {
-  margin-top: 3rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #introduction {
-  max-width: 550px;
   color: solid #d20094;
 }
 
 #timer {
-  position: relative;
-  bottom: 4rem;
-  right: 15%;
-  display: inline-block;
-  margin-left: 86rem;
-  max-width: 180px;
-  height: 178px;
-  text-align: center;
-  font-size: 10px;
-}
-#textTimer {
+  border: #00ffff 1px solid;
+  width: 25%;
+  font-size: 10%;
   position: absolute;
-  top: 50%;
-  left: 62%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+  padding: 2%;
+}
+
+#textTimer {
+  border: #d20094 2px solid;
   color: #3498db;
   font-size: 10px;
   font-family: "Outfit", "sans-serif";
-  line-height: 1;
   font-weight: 200;
+  margin-top: 5%;
 }
 
 .remainingSeconds {
+  margin-button: 20%;
+  border: #f44336 solid 1px;
   font-size: 50px;
   display: block;
   font-weight: 300;
@@ -76,15 +61,12 @@ span {
 
 h2 {
   font-family: "Outfit", "sans-serif";
-  font-size: 45px;
+  font-size: 30px;
   color: white;
   text-align: center;
-  margin-top: 12rem;
-  margin-bottom: 2rem;
 }
 
 .answerBtn {
-  width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -95,8 +77,8 @@ h2 {
   height: 65px;
   text-align: center;
   border-radius: 50px;
-  margin-left: 35px;
-  margin-top: 20px;
+  margin-left: 5%;
+  margin-top: 2%;
   font-family: "Inter", "sans-serif";
   box-shadow: 0px -3px 7px 4px #c0c0c0;
   border: none;
@@ -114,24 +96,17 @@ h2 {
 .answersContainer {
   text-align: center;
   display: inline-block;
-  width: 1000px;
-  margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #quizzContainer {
-  display: inline-block;
-  position: relative;
-  bottom: 5rem;
-  width: 100%;
   text-align: center;
-  transform: translate(10px, -144px);
 }
 
 #questionNumberContainer {
-  /* position: absolute; */
-  bottom: 0px;
-  width: 100%;
-  margin-top: 30px;
+  margin-bottom: 2%;
+  margin-top: 2%;
   text-align: center;
 }
 
@@ -139,9 +114,6 @@ h2 {
   font-family: "Outfit", "sans-serif";
   font-size: 20px;
   color: white;
-  padding: 2rem;
-  position: relative;
-  bottom: 10rem;
 }
 
 .answer.incorrect {
@@ -151,24 +123,24 @@ h2 {
   background-color: #4caf50;
 }
 #startQuizButton {
-  width: 13rem;
+  width: 50%;
   padding: 1rem;
   border: none;
-  box-shadow: 0px 0px 38px 3px #00ffff;
+  box-shadow: 0px 0px 30px 2px #00ffff;
   background-color: #00ffff;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Outfit", "sans-serif";
   font-weight: 800;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 5%;
   text-align: center;
   position: relative;
   z-index: 10;
 }
 
 #difficultySelect {
-  width: 15rem;
-  padding: 1rem;
+  width: 70%;
+  padding: 3%;
   border: none;
   border-radius: 2rem;
   background-color: #d20094;
@@ -183,8 +155,8 @@ h2 {
 
 #numQuestions {
   margin: 0 auto;
-  width: 8rem;
-  padding: 1rem;
+  width: 60%;
+  padding: 3%;
   border-radius: 50px;
   background-color: #d20094;
   color: white;
@@ -200,7 +172,7 @@ h2 {
 
 label {
   display: block;
-  padding: 1rem;
+  padding: 3%;
   border: none;
   margin-top: 1%;
   font-size: 16px;
@@ -212,9 +184,16 @@ label {
 
 #selectChoice {
   width: 25%;
-  margin: 2% auto;
+  height: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4%;
+  margin-bottom: 0;
   border: 2px solid white;
   text-align: center;
-  padding: 3%;
+  padding: 2%;
   box-shadow: 0px -3px 7px 4px #c0c0c0;
+}
+#questionsCont {
+  margin: 10% 15% 4%;
 }
