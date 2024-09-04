@@ -2,23 +2,26 @@ body {
   background-image: url(./asset/bg.jpg);
   background-size: cover;
   max-width: 800px;
-  padding-left: 3rem;
+  padding-left: 3%;
   color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 .logo img {
   width: 100px;
   text-align: left;
-  padding-top: 2rem;
+  padding-top: 3%;
 }
 
 h1 {
   font-family: "Outfit", system-ui;
   font-optical-sizing: auto;
   font-style: normal;
-  margin-top: 20px;
+  margin-top: 15%;
+  margin-bottom: 15%;
   font-size: 60px;
   font-weight: 400;
   line-height: 0.8;
@@ -28,7 +31,7 @@ h1 > span {
   font-weight: 700;
 }
 .title {
-  margin-top: 5%;
+  margin-top: 6%;
   margin-right: 50%;
 }
 .instructions {
@@ -44,12 +47,12 @@ h3 {
 }
 p {
   margin-inline-start: auto;
-  margin-top: 0.2rem;
+  margin-top: 1%;
   margin-right: 50%;
 }
 
 .instructions > ul > li {
-  margin-bottom: 5px;
+  margin-bottom: 1%;
 }
 li > span {
   font-weight: bold;
@@ -57,8 +60,8 @@ li > span {
 
 .instructions > ul {
   margin: 0;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-top: 5%;
+  margin-bottom: 10%;
   padding: 0;
   padding-left: 1rem;
 }
@@ -86,7 +89,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -103,10 +105,11 @@ footer {
 }
 #myButton {
   font-size: 20px;
+  margin-right: 0;
 }
 #myCheckbox {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   appearance: none;
   background-color: transparent;
   border: solid 1px white;
