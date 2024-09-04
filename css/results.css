@@ -98,13 +98,20 @@ l'aline-center
 }
 
 /* regola per l'animazione */
-@keyframes rotateGradient {
+@keyframes revealGradient {
   from {
-    transform: rotate(0deg);
+    mask: conic-gradient(from 0deg at 50% 50%, transparent 0%, black 0%);
   }
   to {
-    transform: rotate(360deg);
+    mask: conic-gradient(from 0deg at 50% 50%, transparent 0%, black 100%);
   }
+}
+
+#graphic {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#3498db 0deg, #3498db 120deg, #2ecc71 120deg, #2ecc71 240deg, #e74c3c 240deg, #e74c3c 360deg);
+  animation: revealGradient 3s linear forwards;
 }
 
 .hero > div::before {
