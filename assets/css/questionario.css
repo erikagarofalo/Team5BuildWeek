@@ -10,15 +10,12 @@ body {
 }
 
 header {
-  max-width: 900px;
-  padding-top: 2rem;
+  padding-top: 5%;
   padding-left: 10%;
-  height: 20%;
 }
 
 #epicodeLogo {
-  width: 13rem;
-  height: 3rem;
+  width: 15%;
 }
 
 #titleContainer {
@@ -69,7 +66,6 @@ span {
   font-family: "Outfit", "sans-serif";
   line-height: 1;
   font-weight: 200;
-  text-transform: uppercase;
 }
 
 .remainingSeconds {
@@ -206,7 +202,7 @@ label {
   display: block;
   padding: 1rem;
   border: none;
-  margin-top: 1rem;
+  margin-top: 1%;
   font-size: 16px;
   text-align: center;
   font-family: "Outfit", "sans-serif";
@@ -215,11 +211,10 @@ label {
 }
 
 #selectChoice {
-  width: 30%;
-  margin: 2rem auto;
+  width: 25%;
+  margin: 2% auto;
   border: 2px solid white;
   text-align: center;
-  padding: 5rem;
-  height: 40vh;
+  padding: 3%;
   box-shadow: 0px -3px 7px 4px #c0c0c0;
 }
