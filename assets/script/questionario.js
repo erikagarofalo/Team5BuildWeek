@@ -803,7 +803,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadQuestion() {
       const question = questions[currentQuestionIndex];
       questionElement.textContent = question.question; // Visualizza la domanda corrente
-      questionNumberElement.textContent = `QUESTION  ${currentQuestionIndex + 1}  /  ${questions.length}`;
+
+      questionNumberElement.innerHTML = `QUESTION  ${currentQuestionIndex + 1}  / <span id="color-span">
+      ${questions.length}
+      </span>`;
+      const span = document.getElementById("color-span");
+      span.style.color = "#d20094";
 
       function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -824,7 +829,6 @@ document.addEventListener("DOMContentLoaded", function () {
         li.onclick = () => selectAnswer(answer); // Assegna l'evento click alla risposta
         answerList.appendChild(li);
       });
-
       startCountdown(); // Avvia il timer per la nuova domanda
     }
 
