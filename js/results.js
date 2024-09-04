@@ -9,8 +9,6 @@ window.onload = function () {
   const wrongRapp = document.getElementById("wrong-rapp");
 
   let andreaCss = document.styleSheets[2];
-  const score = localStorage.getItem("score");
-  const totalQuestions = localStorage.getItem("totalQuestions");
 
   const correctScore = localStorage.getItem("score") * 10;
   const totalQuestions = localStorage.getItem("totalQuestions") * 10;
