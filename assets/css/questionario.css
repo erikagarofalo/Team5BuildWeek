@@ -60,6 +60,7 @@ h2 {
   font-size: 30px;
   color: white;
   text-align: center;
+  line-height: 2.5rem;
 }
 
 .answerBtn {
@@ -91,8 +92,7 @@ h2 {
 .answersContainer {
   text-align: center;
   display: inline-block;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 2rem;
 }
 
 #quizzContainer {
