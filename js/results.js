@@ -83,5 +83,30 @@ window.onload = function () {
 
     divGradientText.style.left = "3.9rem";
     divGradientText.style.top = "5.5rem";
+  } else {
+    console.log("Launching confetti!");
+    const duration = 2 * 300;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 7,
+        angle: 70, // Angle for the left side
+        spread: 60,
+        startVelocity: 90,
+        origin: { x: 0 }, // Start from the left
+      });
+      confetti({
+        particleCount: 7,
+        angle: 110, // Angle for the right side
+        spread: 60,
+        startVelocity: 90,
+        origin: { x: 1 }, // Start from the right
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
   }
 };
