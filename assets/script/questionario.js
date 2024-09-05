@@ -16,12 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selectedQuestions = [];
 
-    if (selectedDifficulty === "easy") {
-      selectedQuestions = questionsEasy;
-    } else if (selectedDifficulty === "medium") {
-      selectedQuestions = questionsMedium;
-    } else if (selectedDifficulty === "hard") {
-      selectedQuestions = questionsHard;
+    switch (selectedDifficulty) {
+      case "easy":
+        selectedQuestions = questionsEasy;
+        break;
+      case "medium":
+        selectedQuestions = questionsMedium;
+        break;
+      case "hard":
+        selectedQuestions = questionsHard;
+        break;
     }
 
     document.getElementById("selectChoice").style.display = "none";
@@ -30,25 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function startQuiz(questions, numQuestions) {
-    let countdown; // Imposta il timer a 60 secondi
-    let interval; // Variabile per il timer
-    let currentQuestionIndex = 0; // Indice della domanda corrente
-    let score = 0; // Punteggio del giocatore
-    let userAnswers = []; // Storico delle risposte dell'utente
-    let selectedQuestions = []; // Domande selezionate per il quiz
+    let countdown;
+    let interval;
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let userAnswers = [];
+    let selectedQuestions = [];
 
     const startCountdown = () => {
       countdown = 60;
-      updateDisplay(countdown); // Aggiorna subito il display del timer
-      updateCircleProgress(); // Aggiorna subito il cerchio di progresso
+      updateDisplay(countdown);
+      updateCircleProgress();
 
       interval = setInterval(() => {
         countdown--;
-        updateDisplay(countdown); // Aggiorna il display del timer
-        updateCircleProgress(); // Aggiorna il cerchio di progresso
+        updateDisplay(countdown);
+        updateCircleProgress();
         if (countdown <= 0) {
-          clearInterval(interval); // Ferma il timer quando il countdown arriva a 0
-          loadNextQuestion(); // Carica la prossima domanda
+          clearInterval(interval);
+          loadNextQuestion();
         }
       }, 1000);
     };
@@ -74,17 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadNextQuestion() {
-      currentQuestionIndex = getQuestionIndex(); // Incrementa l'indice della domanda corrente
+      currentQuestionIndex = getQuestionIndex();
       if (extractedQuestions.length <= numQuestions) {
-        loadQuestion(); // Carica la prossima domanda se ce ne sono ancora
+        loadQuestion();
       } else {
-        endTest(); // Termina il quiz se non ci sono più domande
+        endTest();
       }
     }
 
     function loadQuestion() {
       const question = questions[currentQuestionIndex];
-      questionElement.textContent = question.question; // Visualizza la domanda corrente
+      questionElement.textContent = question.question;
 
       questionNumberElement.innerHTML = `QUESTION  ${extractedQuestions.length}  / <span id="color-span">
       ${numQuestions}
