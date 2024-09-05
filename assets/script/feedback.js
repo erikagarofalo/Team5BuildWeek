@@ -40,20 +40,37 @@ stars.forEach((star, index) => {
 const feedbackTitle = document.createElement("h1");
 const feedbackSubtitle = document.createElement("h3");
 
-// console.log(feedback);
 feedbackBtn.addEventListener("click", () => {
   if (selectedStar === true) {
     sectionSelec.style.display = "none";
     feedbackTitle.innerHTML = `Thanks for your feedback!<br><br>`;
     feedbackTitle.style.textAlign = "center";
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://giphy.com/embed/t3sZxY5zS5B0z5zMIz";
+    iframe.width = "480";
+    iframe.height = "269";
+    iframe.style.border = "0";
+    iframe.allowFullscreen = true;
+    feedbackTitle.appendChild(iframe);
     getMain.appendChild(feedbackTitle);
-    const welcome = document.querySelector("#welcome");
   } else {
     sectionSelec.style.display = "none";
     feedbackTitle.innerHTML = `Where is your feedback?!<br><br>`;
     feedbackTitle.style.textAlign = "center";
-    feedbackSubtitle.innerHTML = `<p>PLEASE LEAVE US A FEEDBACK</p><button onclick="window.location.reload(true);" style="width: 5rem"> <span>&#8676</span></button>`;
-    getMain.appendChild(feedbackTitle);
+    feedbackSubtitle.innerHTML = `<p>PLEASE LEAVE US A FEEDBACK</p>`;
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://giphy.com/embed/pFZTlrO0MV6LoWSDXd";
+    iframe.width = "480";
+    iframe.height = "288";
+    iframe.style.border = "0";
+    iframe.allowFullscreen = true;
+    feedbackTitle.appendChild(iframe);
+    const button = document.createElement("button");
+    button.style.width = "5rem";
+    button.innerHTML = `<span>&#8676;</span>`;
+    button.onclick = () => window.location.reload(true);
+    feedbackSubtitle.appendChild(button);
     feedbackTitle.appendChild(feedbackSubtitle);
+    getMain.appendChild(feedbackTitle);
   }
 });
