@@ -52,7 +52,7 @@ feedbackBtn.addEventListener("click", () => {
     sectionSelec.style.display = "none";
     feedbackTitle.innerHTML = `Where is your feedback?!<br><br>`;
     feedbackTitle.style.textAlign = "center";
-    feedbackSubtitle.innerHTML = `<p>PLEASE LEAVE US A FEEDBACK</p><button onclick="window.location.reload(true);" style="width: 5rem"> <img src="./assets/img/arrow-back-outline.svg" style="width: 2rem"></button>`;
+    feedbackSubtitle.innerHTML = `<p>PLEASE LEAVE US A FEEDBACK</p><button onclick="window.location.reload(true);" style="width: 5rem"> <span>&#8676</span></button>`;
     getMain.appendChild(feedbackTitle);
     feedbackTitle.appendChild(feedbackSubtitle);
   }

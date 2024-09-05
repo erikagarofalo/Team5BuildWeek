@@ -16,7 +16,7 @@ if (checkbox && button && divHome) {
 
   button.addEventListener("click", function () {
     if (button.disabled === false) {
-      divHome.classList.add("hidden");
+      divHome.classList.add("hidden, illuminated");
     } else {
       button.classList.remove("illuminated");
     }
