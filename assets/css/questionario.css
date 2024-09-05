@@ -33,8 +33,7 @@ span {
 }
 
 #timer {
-  border: #00ffff 1px solid;
-  width: 25%;
+  width: 180px;
   font-size: 10%;
   position: absolute;
   top: 0;
@@ -43,16 +42,15 @@ span {
 }
 
 #textTimer {
-  border: #d20094 2px solid;
   color: #3498db;
   font-size: 10px;
   font-family: "Outfit", "sans-serif";
   font-weight: 200;
   margin-top: 5%;
+  left: 74px;
 }
 
 .remainingSeconds {
-  border: #f44336 solid 1px;
   font-size: 50px;
   display: block;
   font-weight: 300;
@@ -72,8 +70,7 @@ h2 {
 
 .answer {
   display: inline-block;
-  width: 300px;
-  height: 65px;
+  width: 20vw;
   text-align: center;
   border-radius: 50px;
   margin-left: 5%;
@@ -82,9 +79,9 @@ h2 {
   box-shadow: 0px -3px 7px 4px #c0c0c0;
   border: none;
   color: white;
-  line-height: 65px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  padding-block: 2rem;
 }
 .answer:hover {
   background-color: #d20094;
@@ -101,6 +98,8 @@ h2 {
 
 #quizzContainer {
   text-align: center;
+  width: 77%;
+  margin-inline: auto;
 }
 
 #questionNumberContainer {

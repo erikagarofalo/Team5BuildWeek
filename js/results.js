@@ -32,13 +32,13 @@ window.onload = function () {
       background-image: conic-gradient(#c2128d 0% ${Math.floor(wrongPerce * 100)}%, #00ffff 0% ${Math.ceil(correctPerce * 100)}%);
       mask: radial-gradient(farthest-side, transparent 70%, black 71%);
       z-index: 1;
+      animation: rotateGradient 1s linear 1s backwards;
       } `,
         i
       );
       break;
     }
   }
-  gradientDiv.style.animation = "rotateGradient 1s linear 1";
 
   if (correctPerce * 10 < 60) {
     h6.innerHTML = `

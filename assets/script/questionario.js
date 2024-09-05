@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const timer = document.getElementById("textTimer");
       timer.innerHTML = `seconds <span class="remainingSeconds">${remainingSeconds} </span>remaining`;
       timer.style.color = "white";
+      timer.style.display = "block";
+      timer.style.width = "75px";
+      timer.style.width = "75px";
+      timer.style.textAlign = "center";
+      timer.style.position = "relative";
+      timer.style.bottom = "108px";
+      timer.style.left = "51px";
     };
 
     function updateCircleProgress() {
@@ -96,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       answers.forEach((answer) => {
         const li = document.createElement("li");
-        li.className = "answer";
+        li.classList.add("answer");
         li.dataset.answer = answer;
         li.textContent = answer;
         li.onclick = () => selectAnswer(answer); // Assegna l'evento click alla risposta
