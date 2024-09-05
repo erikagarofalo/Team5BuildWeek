@@ -13,6 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedDifficulty = difficultySelect.value;
     const numQuestionsInput = document.getElementById("numQuestions");
     const numQuestions = parseInt(numQuestionsInput.value, 10);
+    const minQuestions = 5; // Numero minimo di domande
+
+    const errorMessage = document.getElementById("error-message");
+
+    // Controllo del numero minimo di domande
+    if (numQuestions < minQuestions) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = `Please select at least ${minQuestions} questions.`;
+
+      // Nascondi il messaggio d'errore dopo 3 secondi
+      setTimeout(() => {
+        errorMessage.style.display = "none";
+      }, 3000);
+
+      return; // Impedisce l'inizio del quiz se il numero di domande è inferiore al minimo
+    }
+
+    let selectedQuestions = [];
 
     if (selectedDifficulty === "easy") {
       selectedQuestions = questionsEasy.slice(0, numQuestions);

@@ -33,12 +33,11 @@ span {
 }
 
 #timer {
-  width: 180px;
+  width: 170px;
   font-size: 10%;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 2%;
 }
 
 #textTimer {
@@ -98,13 +97,14 @@ h2 {
 
 #quizzContainer {
   text-align: center;
-  width: 77%;
+  padding-top: 5rem;
+  width: 800px;
   margin-inline: auto;
 }
 
 #questionNumberContainer {
-  margin-bottom: 2%;
-  margin-top: 8%;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
   text-align: center;
 }
 
@@ -121,19 +121,25 @@ h2 {
   background-color: #4caf50;
 }
 #startQuizButton {
-  width: 50%;
+  width: 180px;
+  height: 45px;
   padding: 1rem;
+  margin-top: 2rem;
   border: none;
-  box-shadow: 0px 0px 30px 2px #00ffff;
+  box-shadow: 0px 0px 1px 1px #00ffff;
   background-color: #00ffff;
   font-size: 16px;
-  font-family: "Outfit", "sans-serif";
+  font-family: "Inter", "sans-serif";
   font-weight: 800;
   cursor: pointer;
-  margin-top: 5%;
   text-align: center;
   position: relative;
   z-index: 10;
+}
+
+#startQuizButton:hover:enabled {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 #difficultySelect {
@@ -150,10 +156,27 @@ h2 {
   cursor: pointer;
   text-align: center;
 }
+svg {
+  width: 150px;
+}
+.error-message {
+  margin-top: 2rem;
+  background-color: #d20094;
+  padding: 5px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-family: "Outfit", "sans-serif";
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
 
+  font-size: 15px;
+  font-weight: 500;
+  color: aliceblue;
+}
 #numQuestions {
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   padding: 3%;
   border-radius: 50px;
   background-color: #d20094;
@@ -170,18 +193,17 @@ h2 {
 
 label {
   display: block;
-  padding: 3%;
+  padding: 1rem;
   border: none;
-  margin-top: 1%;
   font-size: 16px;
   text-align: center;
   font-family: "Outfit", "sans-serif";
-  font-weight: 500;
+  font-weight: 600;
   color: white;
 }
 
 #selectChoice {
-  width: 25%;
+  width: 30%;
   height: 10%;
   margin-right: auto;
   margin-left: auto;
@@ -189,9 +211,6 @@ label {
   margin-bottom: 0;
   border: 2px solid white;
   text-align: center;
-  padding: 2%;
+  padding: 2rem;
   box-shadow: 0px -3px 7px 4px #c0c0c0;
-}
-#questionsCont {
-  margin: 10% 15% 4%;
 }
