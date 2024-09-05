@@ -61,7 +61,7 @@ feedbackBtn.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
     iframe.src = "https://giphy.com/embed/pFZTlrO0MV6LoWSDXd";
     iframe.width = "480";
-    iframe.height = "180";
+    iframe.height = "179";
     iframe.style.border = "0";
     iframe.allowFullscreen = true;
     feedbackTitle.appendChild(iframe);
