@@ -70,9 +70,9 @@ li > span {
   display: inline-block;
   width: 160%;
   height: 50px;
-  border: 2px solid #e7e7eb;
+  border: 2px solid rgb(254, 254, 254);
   background-color: rgba(100, 100, 100, 0);
-  color: white;
+  color: rgb(254, 254, 254);
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1rem;
@@ -96,9 +96,14 @@ footer {
   font-weight: 700;
   font-size: 12px;
 }
-
 .illuminated {
-  background-color: rgb(0, 255, 255);
+  background-color: rgba(0, 255, 255, 0.2); /* Cambia il background al celestino */
+  transition: background-color 0.3s ease; /* Transizione morbida per il cambio di background */
+}
+
+.illuminated:hover {
+  transform: scale(1.05); /* Ingrandimento su hover */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); /* Ombra al passaggio del mouse */
 }
 #myButton {
   font-size: 20px;
@@ -107,12 +112,14 @@ footer {
 }
 
 span {
-  color: white;
+  color: rgb(254, 254, 254);
 }
 
 #myButton:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  color: rgb(5, 5, 5);
+  background-color: rgb(0, 255, 255);
 }
 
 #myCheckbox {

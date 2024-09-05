@@ -1,6 +1,7 @@
 const checkbox = document.getElementById("myCheckbox");
 const button = document.getElementById("myButton");
 const divHome = document.querySelector(".box");
+
 if (checkbox && button && divHome) {
   checkbox.addEventListener("change", function () {
     if (checkbox.checked) {
@@ -15,10 +16,8 @@ if (checkbox && button && divHome) {
   });
 
   button.addEventListener("click", function () {
-    if (button.disabled === false) {
-      divHome.classList.add("hidden, illuminated");
-    } else {
-      button.classList.remove("illuminated");
+    if (!button.disabled) {
+      button.style.backgroundColor = "rgb(0, 255, 255)";
     }
   });
 }
