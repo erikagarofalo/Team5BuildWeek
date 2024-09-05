@@ -16,12 +16,20 @@ window.onload = function () {
   const correctPerce = correctScore / totalQuestions;
   const wrongPerce = wrongScore / totalQuestions;
 
-  let currentProgress = 0; // Progresso iniziale dell'animazione
+  let currentProgress = 0;
 
   const updateGradient = () => {
     if (currentProgress <= 1) {
-      const wrongEnd = Math.floor(wrongPerce * currentProgress * 100);
-      const correctEnd = Math.ceil(correctPerce * currentProgress * 100);
+      let correctEnd, wrongEnd;
+
+      if (correctPerce === 0) {
+        // Se non ci sono risposte corrette, mostra solo il colore delle risposte sbagliate
+        correctEnd = 0;
+        wrongEnd = 100;
+      } else {
+        correctEnd = Math.round(correctPerce * currentProgress * 100);
+        wrongEnd = Math.round(wrongPerce * currentProgress * 100);
+      }
 
       for (let i = 0; i < andreaCss.cssRules.length; i++) {
         if (andreaCss.cssRules[i].selectorText === ".hero > div::before") {
@@ -29,25 +37,26 @@ window.onload = function () {
 
           andreaCss.insertRule(
             `
-          .hero > div::before{
-          content: "";
-          display: block;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background-image: conic-gradient(#c2128d 0% ${wrongEnd}%, #00ffff 0% ${correctEnd}%);
-          mask: radial-gradient(farthest-side, transparent 70%, black 71%);
-          z-index: 1;
-          } `,
+            .hero > div::before{
+              content: "";
+              display: block;
+              width: 300px;
+              height: 300px;
+              border-radius: 50%;
+              background-image: conic-gradient(from 180deg, #c2128d 0% ${wrongEnd}%, #00ffff 0% ${correctEnd}%);
+              mask: radial-gradient(farthest-side, transparent 70%, black 71%);
+              z-index: 1;
+              transform: rotate(180deg); /* Ruota di 180 gradi per ottenere il movimento antiorario */
+            } `,
             i
           );
           break;
         }
       }
 
-      currentProgress += 0.02; // Incrementa il progresso dell'animazione
+      currentProgress += 0.02;
     } else {
-      clearInterval(gradientInterval); // Ferma l'animazione quando raggiunge il 100%
+      clearInterval(gradientInterval);
     }
   };
 
@@ -56,7 +65,13 @@ window.onload = function () {
   // Inizializza il testo e i valori
   gradientDiv.style.animation = "rotateGradient 1s linear 1";
 
-  if (correctPerce * 10 < 60) {
+  correctPerc.innerHTML = `${Math.ceil((correctScore / totalQuestions) * 100)}%`;
+  wrongPerc.innerHTML = `${Math.floor((wrongScore / totalQuestions) * 100)}%`;
+
+  correctRapp.innerHTML = `${correctScore / 10}/${totalQuestions / 10} `;
+  wrongRapp.innerHTML = `${wrongScore / 10}/${totalQuestions / 10}`;
+
+  if (correctPerce * 100 < 60) {
     h6.innerHTML = `
     Keep Trying!
     <span>You didn't pass this time.</span>
@@ -69,10 +84,4 @@ window.onload = function () {
     divGradientText.style.left = "3.9rem";
     divGradientText.style.top = "5.5rem";
   }
-
-  correctPerc.innerHTML = `${Math.ceil((correctScore / totalQuestions) * 100)}%`;
-  wrongPerc.innerHTML = `${Math.floor((wrongScore / totalQuestions) * 100)}%`;
-
-  correctRapp.innerHTML = `${correctScore / 10}/${totalQuestions / 10} `;
-  wrongRapp.innerHTML = `${wrongScore / 10}/${totalQuestions / 10}`;
 };
