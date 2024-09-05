@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("score", score);
       localStorage.setItem("totalQuestions", questions.length);
       localStorage.setItem("currentQuestionIndex", currentQuestionIndex);
+      localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
       window.location.href = "results.html";
     }
 
