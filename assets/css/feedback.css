@@ -125,3 +125,9 @@ button:hover {
 .star.hovered {
   filter: brightness(1);
 }
+
+#span-feedback {
+  font-size: 63px;
+  position: relative;
+  bottom: 17px;
+}

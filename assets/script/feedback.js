@@ -67,7 +67,7 @@ feedbackBtn.addEventListener("click", () => {
     feedbackTitle.appendChild(iframe);
     const button = document.createElement("button");
     button.style.width = "5rem";
-    button.innerHTML = `<span>&#8676;</span>`;
+    button.innerHTML = `<span id="span-feedback">&#8676;</span>`;
     button.onclick = () => window.location.reload(true);
     feedbackSubtitle.appendChild(button);
     feedbackTitle.appendChild(feedbackSubtitle);
