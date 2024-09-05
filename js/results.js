@@ -16,28 +16,44 @@ window.onload = function () {
   const correctPerce = correctScore / totalQuestions;
   const wrongPerce = wrongScore / totalQuestions;
 
-  for (let i = 0; i < andreaCss.cssRules.length; i++) {
-    if (andreaCss.cssRules[i].selectorText === ".hero > div::before") {
-      andreaCss.deleteRule(i);
+  let currentProgress = 0; // Progresso iniziale dell'animazione
 
-      andreaCss.insertRule(
-        `
+  const updateGradient = () => {
+    if (currentProgress <= 1) {
+      const wrongEnd = Math.floor(wrongPerce * currentProgress * 100);
+      const correctEnd = Math.ceil(correctPerce * currentProgress * 100);
 
-      .hero > div::before{
-      content: "";
-      display: block;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background-image: conic-gradient(#c2128d 0% ${Math.floor(wrongPerce * 100)}%, #00ffff 0% ${Math.ceil(correctPerce * 100)}%);
-      mask: radial-gradient(farthest-side, transparent 70%, black 71%);
-      z-index: 1;
-      } `,
-        i
-      );
-      break;
+      for (let i = 0; i < andreaCss.cssRules.length; i++) {
+        if (andreaCss.cssRules[i].selectorText === ".hero > div::before") {
+          andreaCss.deleteRule(i);
+
+          andreaCss.insertRule(
+            `
+          .hero > div::before{
+          content: "";
+          display: block;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background-image: conic-gradient(#c2128d 0% ${wrongEnd}%, #00ffff 0% ${correctEnd}%);
+          mask: radial-gradient(farthest-side, transparent 70%, black 71%);
+          z-index: 1;
+          } `,
+            i
+          );
+          break;
+        }
+      }
+
+      currentProgress += 0.02; // Incrementa il progresso dell'animazione
+    } else {
+      clearInterval(gradientInterval); // Ferma l'animazione quando raggiunge il 100%
     }
-  }
+  };
+
+  const gradientInterval = setInterval(updateGradient, 50); // Aggiorna il gradiente ogni 50ms
+
+  // Inizializza il testo e i valori
   gradientDiv.style.animation = "rotateGradient 1s linear 1";
 
   if (correctPerce * 10 < 60) {

@@ -185,19 +185,28 @@ footer {
 
 button {
   width: 15%;
-  height: 50px;
-  border: 1px solid #e7e7eb;
+  height: 40px;
+  border: 2px solid #e7e7eb;
   background-color: rgba(100, 100, 100, 0);
   color: white;
   position: relative;
-  bottom: 4rem;
+  bottom: 3rem;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
   background-color: rgb(0, 255, 255);
+}
+
+@keyframes fillGradient {
+  0% {
+    background-image: conic-gradient(#c2128d 0%, #00ffff 0%);
+  }
+  100% {
+    background-image: conic-gradient(#c2128d 0% var(--correct-end), #00ffff 0% var(--wrong-end));
+  }
 }
