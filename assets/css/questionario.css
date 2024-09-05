@@ -47,6 +47,7 @@ span {
   font-weight: 200;
   margin-top: 5%;
   left: 74px;
+  text-transform: uppercase;
 }
 
 .remainingSeconds {

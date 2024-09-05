@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedDifficulty = difficultySelect.value;
     const numQuestionsInput = document.getElementById("numQuestions");
     const numQuestions = parseInt(numQuestionsInput.value, 10);
-    
-    
+
     let selectedQuestions = [];
 
     if (selectedDifficulty === "easy") {
@@ -148,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         loadNextQuestion(); // Carica la prossima domanda
-      }, 400);
+      }, 1000);
     }
 
     function endTest() {
