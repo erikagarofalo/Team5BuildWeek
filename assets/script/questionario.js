@@ -1,5 +1,3 @@
-//import { questionsEasy, questionsMedium, questionsHard } from "./domande.js";
-
 document.addEventListener("DOMContentLoaded", function () {
   const questionNumberElement = document.getElementById("questionNumber");
   const questionElement = document.getElementById("question");
@@ -99,19 +97,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
       const answers = [question.correct_answer, ...question.incorrect_answers];
-      shuffleArray(answers); // Mescola l'array delle risposte
+      shuffleArray(answers);
 
-      answerList.innerHTML = ""; // Pulisce le risposte precedenti
+      answerList.innerHTML = "";
 
       answers.forEach((answer) => {
         const li = document.createElement("li");
         li.classList.add("answer");
         li.dataset.answer = answer;
         li.textContent = answer;
-        li.onclick = () => selectAnswer(answer); // Assegna l'evento click alla risposta
+        li.onclick = () => selectAnswer(answer);
         answerList.appendChild(li);
       });
-      startCountdown(); // Avvia il timer per la nuova domanda
+      startCountdown();
     }
 
     function selectAnswer(selectedAnswer) {
@@ -143,21 +141,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedButton = answerList.querySelector(`li[data-answer="${selectedAnswer}"]`);
       selectedButton.classList.add("selected");
 
-      clearInterval(interval); // Ferma il timer corrente
+      clearInterval(interval);
 
       setTimeout(() => {
-        loadNextQuestion(); // Carica la prossima domanda
+        loadNextQuestion();
       }, 1000);
     }
 
     function endTest() {
-      console.log("User Answers:", userAnswers); // Visualizza le risposte dell'utente nel console log
-      localStorage.setItem("score", score); // Salva il punteggio in localStorage
-      localStorage.setItem("totalQuestions", questions.length); // Salva il numero di domande totali in localStorage
-      localStorage.setItem("currentQuestionIndex", currentQuestionIndex); // Salva l'indice della domanda corrente in localStorage
-      window.location.href = "results.html"; // Reindirizza alla pagina dei risultati
+      localStorage.setItem("score", score);
+      localStorage.setItem("totalQuestions", questions.length);
+      localStorage.setItem("currentQuestionIndex", currentQuestionIndex);
+      window.location.href = "results.html";
     }
 
-    loadQuestion(); // Inizia il quiz caricando la prima domanda
+    loadQuestion();
   }
 });
