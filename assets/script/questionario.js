@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function updateCircleProgress() {
-      const progress = (countdown / 61) * 351;
+      const progress = (countdown / 61) * 352;
       const circleProgress = document.querySelector("#circle-progress");
-      circleProgress.style.strokeDashoffset = 351 - progress;
+      circleProgress.style.strokeDashoffset = progress;
     }
 
     function loadNextQuestion() {
