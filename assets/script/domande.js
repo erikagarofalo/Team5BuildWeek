@@ -101,7 +101,7 @@ const questionsEasy = [
     category: "Science: Computers",
     question: "Which computer hardware device provides an interface for all other connected devices to communicate?",
     correct_answer: "Motherboard",
-    incorrect_answers: ["Central Processing Unit", "Hard Disk Drive", "Random Access Memory"],
+    incorrect_answers: ["CPU", "Hard Disk Drive", "RAM"],
   },
   {
     type: "multiple",
@@ -116,8 +116,8 @@ const questionsEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question: "What does the Prt Sc button do?",
-    correct_answer: "Captures what's on the screen and copies it to your clipboard",
-    incorrect_answers: ["Nothing", "Saves a .png file of what's on the screen in your screenshots folder in photos", "Closes all windows"],
+    correct_answer: "Captures the screen and copies it to your clipboard",
+    incorrect_answers: ["Nothing", "Saves a .png file in your screenshots folder", "Closes all windows"],
   },
   {
     type: "boolean",
@@ -131,9 +131,9 @@ const questionsEasy = [
     type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
-    question: "In computing, what does MIDI stand for?",
-    correct_answer: "Musical Instrument Digital Interface",
-    incorrect_answers: ["Musical Interface of Digital Instruments", "Modular Interface of Digital Instruments", "Musical Instrument Data Interface"],
+    question: 'In "Hexadecimal", what color would be displayed from the color code "#00FF00"?',
+    correct_answer: "Green",
+    incorrect_answers: ["Red", "Blue", "Yellow"],
   },
   {
     type: "multiple",
@@ -264,7 +264,7 @@ const questionsMedium = [
     category: "Science: Computers",
     question: "On which computer hardware device is the BIOS chip located?",
     correct_answer: "Motherboard",
-    incorrect_answers: ["Hard Disk Drive", "Central Processing Unit", "Graphics Processing Unit"],
+    incorrect_answers: ["Hard Disk Drive", "CPU", "GPU"],
   },
   {
     type: "multiple",
@@ -358,9 +358,9 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "What does the term MIME stand for, in regards to computing?",
-    correct_answer: "Multipurpose Internet Mail Extensions",
-    incorrect_answers: ["Mail Internet Mail Exchange", "Multipurpose Interleave Mail Exchange", "Mail Interleave Method Exchange"],
+    question: "What is the correct term for the metal object in between the CPU and the CPU fan within a computer system?",
+    correct_answer: "Heat Sink",
+    incorrect_answers: ["CPU Vent", "Temperature Decipator", "Heat Vent"],
   },
   {
     type: "multiple",
@@ -400,7 +400,7 @@ const questionsMedium = [
     category: "Science: Computers",
     question: "Unix Time is defined as the number of seconds that have elapsed since when?",
     correct_answer: "Midnight, January 1, 1970",
-    incorrect_answers: ["Midnight, July 4, 1976", "Midnight on the creator of Unix's birthday", "Midnight, July 4, 1980"],
+    incorrect_answers: ["Midnight, July 4, 1976", "Midnight, January 10, 1976", "Midnight, July 4, 1980"],
   },
   {
     type: "multiple",
@@ -651,7 +651,7 @@ const questionsHard = [
     category: "Science: Computers",
     question: "What vulnerability ranked #1 on the OWASP Top 10 in 2013?",
     correct_answer: "Injection",
-    incorrect_answers: ["Broken Authentication", "Cross-Site Scripting", "Insecure Direct Object References"],
+    incorrect_answers: ["Broken Auth", "Cross-Site Scripting", "Insecure Direct Object Refs"],
   },
   {
     type: "multiple",
@@ -675,7 +675,7 @@ const questionsHard = [
     category: "Science: Computers",
     question: "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
     correct_answer: "ADPCM Sampler",
-    incorrect_answers: ["FM Synthesizer", "Programmable Sound Generator (PSG)", "PCM Sampler"],
+    incorrect_answers: ["FM Synthesizer", "PSG", "PCM Sampler"],
   },
   {
     type: "multiple",
