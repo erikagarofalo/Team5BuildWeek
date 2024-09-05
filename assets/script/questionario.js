@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const questionElement = document.getElementById("question");
   const answerList = document.getElementById("answerList");
   const startQuizButton = document.getElementById("startQuizButton");
+  const extractedQuestions = [];
   const timer = document.getElementById("timer");
+
   timer.style.display = "none";
 
   startQuizButton.addEventListener("click", function () {
@@ -15,19 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let selectedQuestions = [];
 
     if (selectedDifficulty === "easy") {
-      selectedQuestions = questionsEasy.slice(0, numQuestions);
+      selectedQuestions = questionsEasy;
     } else if (selectedDifficulty === "medium") {
-      selectedQuestions = questionsMedium.slice(0, numQuestions);
+      selectedQuestions = questionsMedium;
     } else if (selectedDifficulty === "hard") {
-      selectedQuestions = questionsHard.slice(0, numQuestions);
+      selectedQuestions = questionsHard;
     }
 
     document.getElementById("selectChoice").style.display = "none";
     timer.style.display = "block";
-    startQuiz(selectedQuestions);
+    startQuiz(selectedQuestions, numQuestions);
   });
 
-  function startQuiz(questions) {
+  function startQuiz(questions, numQuestions) {
     let countdown; // Imposta il timer a 60 secondi
     let interval; // Variabile per il timer
     let currentQuestionIndex = 0; // Indice della domanda corrente
@@ -72,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadNextQuestion() {
-      currentQuestionIndex++; // Incrementa l'indice della domanda corrente
-      if (currentQuestionIndex < questions.length) {
+      currentQuestionIndex = getQuestionIndex(); // Incrementa l'indice della domanda corrente
+      if (extractedQuestions.length <= numQuestions) {
         loadQuestion(); // Carica la prossima domanda se ce ne sono ancora
       } else {
         endTest(); // Termina il quiz se non ci sono più domande
@@ -84,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const question = questions[currentQuestionIndex];
       questionElement.textContent = question.question; // Visualizza la domanda corrente
 
-      questionNumberElement.innerHTML = `QUESTION  ${currentQuestionIndex + 1}  / <span id="color-span">
-      ${questions.length}
+      questionNumberElement.innerHTML = `QUESTION  ${extractedQuestions.length}  / <span id="color-span">
+      ${numQuestions}
       </span>`;
       const span = document.getElementById("color-span");
       span.style.color = "#d20094";
@@ -150,12 +152,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function endTest() {
       localStorage.setItem("score", score);
-      localStorage.setItem("totalQuestions", questions.length);
+      localStorage.setItem("totalQuestions", numQuestions);
       localStorage.setItem("currentQuestionIndex", currentQuestionIndex);
       localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
       window.location.href = "results.html";
     }
 
-    loadQuestion();
+    function getQuestionIndex() {
+      let flag = false;
+      let currentQuestionIndex = 0;
+      while (!flag) {
+        let question = Math.floor(Math.random() * questions.length);
+        if (!extractedQuestions.includes(question)) {
+          extractedQuestions.push(question);
+          flag = true;
+          currentQuestionIndex = question;
+        }
+      }
+      return currentQuestionIndex;
+    }
+
+    loadNextQuestion();
   }
 });
