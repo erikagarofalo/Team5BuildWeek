@@ -43,7 +43,7 @@ window.onload = function () {
               width: 300px;
               height: 300px;
               border-radius: 50%;
-              background-image: conic-gradient(from 180deg, #c2128d 0% ${wrongEnd}%, #00ffff 0% ${correctEnd}%);
+              background-image: conic-gradient(from 180deg, #00ffff 0% ${correctEnd}%, #c2128d 0% ${wrongEnd}%);
               mask: radial-gradient(farthest-side, transparent 70%, black 71%);
               z-index: 1;
               transform: rotate(180deg); /* Ruota di 180 gradi per ottenere il movimento antiorario */
