@@ -27,7 +27,6 @@ window.onload = function () {
       let correctEnd, wrongEnd;
 
       if (wrongPerce === 0) {
-        // Se non ci sono risposte corrette, mostra solo il colore delle risposte sbagliate
         correctEnd = 100;
         wrongEnd = 0;
       } else {
@@ -64,9 +63,8 @@ window.onload = function () {
     }
   };
 
-  const gradientInterval = setInterval(updateGradient, 50); // Aggiorna il gradiente ogni 50ms
+  const gradientInterval = setInterval(updateGradient, 15);
 
-  // Inizializza il testo e i valori
   gradientDiv.style.animation = "rotateGradient 1s linear 1";
 
   correctPerc.innerHTML = `${Math.ceil((correctScore / totalQuestions) * 100)}%`;
@@ -95,17 +93,17 @@ window.onload = function () {
     (function frame() {
       confetti({
         particleCount: 7,
-        angle: 70, // Angle for the left side
+        angle: 70,
         spread: 60,
         startVelocity: 90,
-        origin: { x: 0 }, // Start from the left
+        origin: { x: 0 },
       });
       confetti({
         particleCount: 7,
-        angle: 110, // Angle for the right side
+        angle: 110,
         spread: 60,
         startVelocity: 90,
-        origin: { x: 1 }, // Start from the right
+        origin: { x: 1 },
       });
 
       if (Date.now() < end) {
