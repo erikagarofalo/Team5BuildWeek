@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function loadNextQuestion() {
       currentQuestionIndex = getQuestionIndex();
-      if (extractedQuestions.length <= numQuestions) {
+      if (extractedQuestions.length < numQuestions) {
         loadQuestion();
       } else {
         endTest();
