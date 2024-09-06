@@ -14,7 +14,6 @@ body {
   background-image: url(../assets/img/bg.jpg);
   background-size: cover;
   background-position: 50% 70%;
-  overflow-y: hidden;
   /* Outfit font */
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -168,9 +167,8 @@ p {
   font-size: 1rem;
 }
 
-span {
+.color {
   color: #00ffff;
-  display: block;
 }
 
 .gradient-text {
@@ -178,7 +176,7 @@ span {
 }
 
 /* inizio footer */
-footer {
+aside {
   text-align: center;
   margin: 0;
 }
@@ -210,4 +208,53 @@ button:hover {
   100% {
     background-image: conic-gradient(#c2128d 0% var(--correct-end), #00ffff 0% var(--wrong-end));
   }
+}
+
+table {
+  margin-inline: auto;
+  border-collapse: collapse;
+  color: white;
+  margin-bottom: 2rem;
+  width: 90%;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+.display-left {
+  border: none;
+}
+
+td {
+  border-collapse: collapse;
+}
+
+th {
+  color: #c2128d;
+}
+tr {
+  border-bottom: 1px solid #c2128d;
+  padding-top: 16px;
+}
+
+.display-inline {
+  display: inline-block;
+}
+
+.is-correct-false,
+.is-correct-true {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.is-correct-false {
+  color: rgba(255, 0, 0, 0.932);
+}
+
+.is-correct-true {
+  color: rgb(0, 252, 0);
 }

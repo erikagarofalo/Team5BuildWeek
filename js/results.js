@@ -7,11 +7,15 @@ window.onload = function () {
   const correctRapp = document.getElementById("correct-rapp");
   const wrongPerc = document.getElementById("wrong-perc");
   const wrongRapp = document.getElementById("wrong-rapp");
+  const footer = document.querySelector("footer");
 
   let andreaCss = document.styleSheets[2];
 
   const correctScore = localStorage.getItem("score") * 10;
   const totalQuestions = localStorage.getItem("totalQuestions") * 10;
+  const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
+  console.log(userAnswers);
+
   const wrongScore = totalQuestions - correctScore;
   const correctPerce = correctScore / totalQuestions;
   const wrongPerce = wrongScore / totalQuestions;
@@ -22,10 +26,10 @@ window.onload = function () {
     if (currentProgress <= 1) {
       let correctEnd, wrongEnd;
 
-      if (correctPerce === 0) {
+      if (wrongPerce === 0) {
         // Se non ci sono risposte corrette, mostra solo il colore delle risposte sbagliate
-        correctEnd = 0;
-        wrongEnd = 100;
+        correctEnd = 100;
+        wrongEnd = 0;
       } else {
         correctEnd = Math.round(correctPerce * currentProgress * 100);
         wrongEnd = Math.round(wrongPerce * currentProgress * 100);
@@ -74,7 +78,7 @@ window.onload = function () {
   if (correctPerce * 100 < 60) {
     h6.innerHTML = `
     Keep Trying!
-    <span>You didn't pass this time.</span>
+    <p class="color">You didn't pass this time.</p>
     `;
     p.innerHTML = `We’re sorry, but we can’t send <br />
     you the certificate right now. <br />
@@ -108,5 +112,33 @@ window.onload = function () {
         requestAnimationFrame(frame);
       }
     })();
+  }
+  let correctAnswer;
+  let selectedAnswer;
+  let question;
+  let tBody = document.querySelector("tbody");
+
+  for (let i = 0; i < userAnswers.length; i++) {
+    console.log(userAnswers[i]);
+    correctAnswer = userAnswers[i].correctAnswer;
+    selectedAnswer = userAnswers[i].selectedAnswer;
+    question = userAnswers[i].question;
+    let tr = document.createElement("tr");
+    let tdQ = document.createElement("td");
+    let tdSa = document.createElement("td");
+    let tdCa = document.createElement("td");
+
+    if (userAnswers[i].isCorrect === true) {
+      tdQ.innerHTML = `<span class="is-correct-true">&#10003;</span> <p class="display-inline">${question}</p>`;
+    } else {
+      tdQ.innerHTML = `<span class="is-correct-false">X</span> <p class="display-inline" >${question}</p>`;
+    }
+    tdQ.style.textAlign = "left";
+    tdSa.innerHTML = `${selectedAnswer}`;
+    tdCa.innerHTML = `${correctAnswer}`;
+    tBody.appendChild(tr);
+    tr.appendChild(tdQ);
+    tr.appendChild(tdSa);
+    tr.appendChild(tdCa);
   }
 };
